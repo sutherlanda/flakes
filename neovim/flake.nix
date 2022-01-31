@@ -17,7 +17,6 @@
 
     # LSP 
     nvim-lspconfig = { url = "github:neovim/nvim-lspconfig"; flake = false; };
-    rust-tools-nvim = { url = "github:simrat39/rust-tools.nvim"; flake = false; };
     nvim-lsp-ts-utils = { url = "github:jose-elias-alvarez/nvim-lsp-ts-utils"; flake = false; };
     null-ls = { url = "github:jose-elias-alvarez/null-ls.nvim"; flake = false; };
 
@@ -70,7 +69,6 @@
 
         plugins = [
           "nvim-lspconfig"
-          "rust-tools-nvim"
           "nvim-lsp-ts-utils"
           "null-ls"
           "vim-nix"
