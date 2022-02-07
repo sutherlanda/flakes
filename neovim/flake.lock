@@ -318,6 +318,7 @@
         "plenary": "plenary",
         "telescope": "telescope",
         "telescope-fzy-native": "telescope-fzy-native",
+        "toggleterm": "toggleterm",
         "tokyonight-nvim": "tokyonight-nvim",
         "vim-glsl": "vim-glsl",
         "vim-nix": "vim-nix",
@@ -355,6 +356,22 @@
       "original": {
         "owner": "nvim-telescope",
         "repo": "telescope-fzy-native.nvim",
+        "type": "github"
+      }
+    },
+    "toggleterm": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1643234001,
+        "narHash": "sha256-0/SrUWHaOJ/lgPtnJuGlVq9K8/1uEQLEqGQjpzPqVUY=",
+        "owner": "akinsho",
+        "repo": "toggleterm.nvim",
+        "rev": "d2ceb2ca3268d09db3033b133c0ee4642e07f059",
+        "type": "github"
+      },
+      "original": {
+        "owner": "akinsho",
+        "repo": "toggleterm.nvim",
         "type": "github"
       }
     },

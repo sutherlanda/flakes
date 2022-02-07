@@ -49,6 +49,7 @@
     telescope = { url = "github:nvim-telescope/telescope.nvim"; flake = false; };
     telescope-fzy-native = { url = "github:nvim-telescope/telescope-fzy-native.nvim"; flake = false; };
     plenary = { url = "github:nvim-lua/plenary.nvim"; flake = false; };
+    toggleterm = { url = "github:akinsho/toggleterm.nvim"; flake = false; };
   };
 
   outputs = inputs@{ self, nixpkgs, flake-utils, neovim-nightly, ... }:
@@ -56,9 +57,6 @@
       let
         pkgs = import nixpkgs {
           inherit system;
-          #overlays = [
-          #neovim-nightly.overlay
-          #];
         };
 
         buildPlugin = name: pkgs.vimUtils.buildVimPluginFrom2Nix {
@@ -91,12 +89,16 @@
           "telescope"
           "telescope-fzy-native"
           "plenary"
+          "toggleterm"
         ];
 
         neovim = pkgs.wrapNeovim pkgs.neovim-unwrapped {
           vimAlias = true;
           configure = {
-            customRC = "source ~/.config/nvim/init.vim"; # Not ideal but if this isn't set, config is not sourced.
+            customRC = ''
+              luafile ${./config/lua/global.lua}
+              luafile ${./config/lua/lsp.lua}
+            '';
             packages.myVimPackage = {
               start = map buildPlugin plugins;
             };
@@ -107,6 +109,7 @@
       rec {
         packages = with pkgs; {
           inherit neovim;
+          config = ./config;
         };
 
         overlay = final: prev: {
