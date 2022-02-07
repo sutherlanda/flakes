@@ -40,6 +40,9 @@
     cmp-cmdline = { url = "github:hrsh7th/cmp-cmdline"; flake = false; };
     luasnip = { url = "github:L3MON4D3/LuaSnip"; flake = false; };
 
+    # Git
+    gitsigns = { url = "github:lewis6991/gitsigns.nvim"; flake = false; };
+
     # Misc
     lualine-nvim = { url = "github:nvim-lualine/lualine.nvim"; flake = false; };
     vim-rooter = { url = "github:airblade/vim-rooter"; flake = false; };
@@ -80,6 +83,7 @@
           "cmp-path"
           "cmp-buffer"
           "cmp-cmdline"
+          "gitsigns"
           "luasnip"
           "lualine-nvim"
           "vim-rooter"

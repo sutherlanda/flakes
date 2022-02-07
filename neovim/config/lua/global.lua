@@ -64,8 +64,14 @@ require'toggleterm'.setup({
   close_on_exit = true,
 })
 
+require'gitsigns'.setup({})
+local gs = package.loaded.gitsigns
+
 -- Set file types
 vim.cmd('autocmd! BufNewFile,BufRead *.vs,*.fs,*.vert,*.frag set ft=glsl')
+
+-- Git signs
+vim.api.nvim_set_keymap('n', '<leader>gb', '<cmd>Gitsigns toggle_current_line_blame<CR>', opts)
 
 -- Misc helpers
 vim.api.nvim_set_keymap('n', '<leader>f', ':set filetype=', { noremap = true })                        -- set filetype helper

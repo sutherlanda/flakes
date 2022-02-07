@@ -95,6 +95,22 @@
         "type": "github"
       }
     },
+    "gitsigns": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1643802670,
+        "narHash": "sha256-+VLrfoFBvuNFTVmJCUv+A/DvKPiXg6XNeDkIfHH5aP0=",
+        "owner": "lewis6991",
+        "repo": "gitsigns.nvim",
+        "rev": "672482df3e80e4e30587c54d4c5e3a7f729ce039",
+        "type": "github"
+      },
+      "original": {
+        "owner": "lewis6991",
+        "repo": "gitsigns.nvim",
+        "type": "github"
+      }
+    },
     "lualine-nvim": {
       "flake": false,
       "locked": {
@@ -304,6 +320,7 @@
         "cmp-path": "cmp-path",
         "flake-utils": "flake-utils",
         "fugitive": "fugitive",
+        "gitsigns": "gitsigns",
         "lualine-nvim": "lualine-nvim",
         "luasnip": "luasnip",
         "neovim-nightly": "neovim-nightly",
