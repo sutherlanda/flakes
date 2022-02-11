@@ -197,7 +197,7 @@ nvim_lsp.tsserver.setup({
 })
 
 local null_ls = require('null-ls')
-null-ls.setup({
+null_ls.setup({
   on_attach = on_attach,
   sources = {
     null_ls.builtins.formatting.prettierd
