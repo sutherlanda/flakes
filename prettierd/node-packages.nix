@@ -4,6 +4,15 @@
 
 let
   sources = {
+    "@fsouza/prettierd-0.18.1" = {
+      name = "_at_fsouza_slash_prettierd";
+      packageName = "@fsouza/prettierd";
+      version = "0.18.1";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/@fsouza/prettierd/-/prettierd-0.18.1.tgz";
+        sha512 = "W2H1E09e1B31MuyOlpXOtemxZ+9qZk7TTOzebVDh5WqHB7+jo1WOJtGwwTyp1k9irlvqqF/FpRzIUrKBR4KGqA==";
+      };
+    };
     "core_d-3.2.0" = {
       name = "core_d";
       packageName = "core_d";
@@ -50,17 +59,13 @@ let
       };
     };
   };
-in
-{
-  "@fsouza/prettierd" = nodeEnv.buildNodePackage {
-    name = "_at_fsouza_slash_prettierd";
-    packageName = "@fsouza/prettierd";
-    version = "0.18.0";
-    src = fetchurl {
-      url = "https://registry.npmjs.org/@fsouza/prettierd/-/prettierd-0.18.0.tgz";
-      sha512 = "pWfdKFP6Ssuc0RChatvf0VXyJFFnFwor3c2HZmLSb7+xNGuGb1j5VpB+gqhaotVIXyySciLJ695RLGBTw0XQEw==";
-    };
+  args = {
+    name = "prettierd";
+    packageName = "prettierd";
+    version = "1.0.0";
+    src = ./.;
     dependencies = [
+      sources."@fsouza/prettierd-0.18.1"
       sources."core_d-3.2.0"
       sources."has-flag-4.0.0"
       sources."nanolru-1.0.0"
@@ -69,12 +74,30 @@ in
     ];
     buildInputs = globalBuildInputs;
     meta = {
-      description = "prettier, as a daemon";
-      homepage = "https://github.com/fsouza/prettierd#readme";
+      description = "";
       license = "ISC";
     };
     production = true;
     bypassCache = true;
     reconstructLock = true;
   };
+in
+{
+  args = args;
+  sources = sources;
+  tarball = nodeEnv.buildNodeSourceDist args;
+  package = nodeEnv.buildNodePackage args;
+  shell = nodeEnv.buildNodeShell args;
+  nodeDependencies = nodeEnv.buildNodeDependencies (lib.overrideExisting args {
+    src = stdenv.mkDerivation {
+      name = args.name + "-package-json";
+      src = nix-gitignore.gitignoreSourcePure [
+        "*"
+        "!package.json"
+        "!package-lock.json"
+      ] args.src;
+      dontBuild = true;
+      installPhase = "mkdir -p $out; cp -r ./* $out;";
+    };
+  });
 }
