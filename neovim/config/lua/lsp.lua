@@ -188,8 +188,6 @@ nvim_lsp.tsserver.setup({
       eslint_bin = "eslint_d",
       eslint_enable_diagnostics = true,
       eslint_enable_code_actions = true,
-      enable_formatting = true,
-      formatter = "prettier"
     })
     ts_utils.setup_client(client)
     on_attach(client, bufnr)
