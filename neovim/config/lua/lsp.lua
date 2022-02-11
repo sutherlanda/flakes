@@ -26,7 +26,7 @@ local on_attach = function(client, bufnr)
   end
 
   -- Format on save.
-  vim.cmd [[autocmd BufWritePre * lua FormatWrite]]
+  vim.cmd [[autocmd BufWritePost * FormatWrite]]
   --vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.formatting_sync()]]
   --vim.api.nvim_exec([[
   --augroup FormatAutogroup
