@@ -26,13 +26,14 @@ local on_attach = function(client, bufnr)
   end
 
   -- Format on save.
+  vim.cmd [[autocmd BufWritePre * lua FormatWrite]]
   --vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.formatting_sync()]]
-  vim.api.nvim_exec([[
-  augroup FormatAutogroup
-    autocmd!
-    autocmd BufWritePost *.ts, *.tsx, *.js, *.jsx, *.rs, *.lua FormatWrite
-  augroup END
-  ]], true)
+  --vim.api.nvim_exec([[
+  --augroup FormatAutogroup
+    --autocmd!
+    --autocmd BufWritePost *.ts, *.tsx, *.js, *.jsx, *.rs, *.lua FormatWrite
+  --augroup END
+  --]], true)
 
   -- Set up language server keybindings.
   -- Goto definition/declaration
