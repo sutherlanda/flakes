@@ -189,7 +189,7 @@ nvim_lsp.tsserver.setup({
       eslint_enable_diagnostics = true,
       eslint_enable_code_actions = true,
       enable_formatting = true,
-      formatter = "prettierd"
+      formatter = "prettier"
     })
     ts_utils.setup_client(client)
     on_attach(client, bufnr)
@@ -200,7 +200,7 @@ nvim_lsp.tsserver.setup({
 require('null-ls').setup({
   on_attach = on_attach,
   sources = {
-    require('null-ls').builtins.formatting.prettierd
+    require('null-ls').builtins.formatting.prettier
   }
 })
 
