@@ -199,9 +199,6 @@ nvim_lsp.tsserver.setup({
 
 require('null-ls').setup({
   on_attach = on_attach,
-  sources = {
-    require('null-ls').builtins.formatting.prettier
-  }
 })
 
 nvim_lsp.pyright.setup({
