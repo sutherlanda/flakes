@@ -79,6 +79,22 @@
         "type": "github"
       }
     },
+    "formatter-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1644596658,
+        "narHash": "sha256-+sYW3Q2RoMGcSn9nAQtJotceaWRah0822jptdjiXyZg=",
+        "owner": "mhartington",
+        "repo": "formatter.nvim",
+        "rev": "c879f29c592afc9b9a15e4daa5fd7e78c56af89c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "mhartington",
+        "repo": "formatter.nvim",
+        "type": "github"
+      }
+    },
     "fugitive": {
       "flake": false,
       "locked": {
@@ -216,22 +232,6 @@
         "type": "github"
       }
     },
-    "null-ls": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1643322091,
-        "narHash": "sha256-55NdHFFmuyoU0ELNnYXvhPGH1iVhyaXkm3zgkNmwO/g=",
-        "owner": "jose-elias-alvarez",
-        "repo": "null-ls.nvim",
-        "rev": "2ae4a5e2e2b35716c44c104ef1afa35ecb40c444",
-        "type": "github"
-      },
-      "original": {
-        "owner": "jose-elias-alvarez",
-        "repo": "null-ls.nvim",
-        "type": "github"
-      }
-    },
     "nvim-cmp": {
       "flake": false,
       "locked": {
@@ -319,6 +319,7 @@
         "cmp-nvim-lsp": "cmp-nvim-lsp",
         "cmp-path": "cmp-path",
         "flake-utils": "flake-utils",
+        "formatter-nvim": "formatter-nvim",
         "fugitive": "fugitive",
         "gitsigns": "gitsigns",
         "lualine-nvim": "lualine-nvim",
@@ -327,7 +328,6 @@
         "nerd-commenter": "nerd-commenter",
         "nerd-tree": "nerd-tree",
         "nixpkgs": "nixpkgs",
-        "null-ls": "null-ls",
         "nvim-cmp": "nvim-cmp",
         "nvim-lsp-ts-utils": "nvim-lsp-ts-utils",
         "nvim-lspconfig": "nvim-lspconfig",

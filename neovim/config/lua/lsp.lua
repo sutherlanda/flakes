@@ -26,7 +26,13 @@ local on_attach = function(client, bufnr)
   end
 
   -- Format on save.
-  vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.formatting_sync()]]
+  --vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.formatting_sync()]]
+  vim.api.nvim_exec([[
+  augroup FormatAutogroup
+    autocmd!
+    autocmd BufWritePost *.ts, *.tsx, *.js, *.jsx, *.rs, *.lua FormatWrite
+  augroup END
+  ]], true)
 
   -- Set up language server keybindings.
   -- Goto definition/declaration
@@ -60,7 +66,8 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', '<leader>qn', '<cmd>cnext<CR>', opts)
 
   -- Format
-  buf_set_keymap('n', '<leader>af', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
+  --buf_set_keymap('n', '<leader>af', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
+  buf_set_keymap('n', '<leader>af', '<cmd>Format<CR>', opts)
 end
 
 
@@ -153,6 +160,22 @@ cmp.setup {
     { name = 'luasnip' },
   },
 }
+
+-- Load formatter
+local formatter = require('formatter')
+local prettierConfig = {
+  exe = "prettier",
+  args = {"--stdin-filepath", vim.fn.fnameescape(vim.api.nvim_buf_get_name(0))},
+  stdin = true
+}
+formatter.setup({
+  filetype = {
+    javascript = prettierConfig,
+    typescript = prettierConfig,
+    javascriptreact = prettierConfig,
+    typescriptreact = prettierConfig
+  }
+})
 
 -- Load language servers and override on_attach.
 local nvim_lsp = require('lspconfig')

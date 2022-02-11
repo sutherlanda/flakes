@@ -18,12 +18,14 @@
     # LSP 
     nvim-lspconfig = { url = "github:neovim/nvim-lspconfig"; flake = false; };
     nvim-lsp-ts-utils = { url = "github:jose-elias-alvarez/nvim-lsp-ts-utils"; flake = false; };
-    null-ls = { url = "github:jose-elias-alvarez/null-ls.nvim"; flake = false; };
 
     # Syntax highlighting
     vim-nix = { url = "github:LnL7/vim-nix"; flake = false; };
     vim-glsl = { url = "github:tikhomirov/vim-glsl"; flake = false; };
     nvim-treesitter = { url = "github:nvim-treesitter/nvim-treesitter"; flake = false; };
+
+    # Formatting
+    formatter-nvim = { url = "github:mhartington/formatter.nvim"; flake = false; };
 
     # Themes
     tokyonight-nvim = { url = "github:folke/tokyonight.nvim"; flake = false; };
@@ -71,10 +73,10 @@
         plugins = [
           "nvim-lspconfig"
           "nvim-lsp-ts-utils"
-          "null-ls"
           "vim-nix"
           "vim-glsl"
           "nvim-treesitter"
+          "formatter-nvim"
           "tokyonight-nvim"
           "nerd-tree"
           "nerd-commenter"
