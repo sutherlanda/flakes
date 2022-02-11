@@ -31,27 +31,10 @@
         "type": "github"
       }
     },
-    "prettierd-src": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1644507919,
-        "narHash": "sha256-CZAw+cWgz851GMNFQyB0nn+x4FScWMJ604UK8Hz/LTQ=",
-        "owner": "fsouza",
-        "repo": "prettierd",
-        "rev": "c93ac62be79bc0b01fedcc935386c38da42eaf68",
-        "type": "github"
-      },
-      "original": {
-        "owner": "fsouza",
-        "repo": "prettierd",
-        "type": "github"
-      }
-    },
     "root": {
       "inputs": {
         "flake-utils": "flake-utils",
-        "nixpkgs": "nixpkgs",
-        "prettierd-src": "prettierd-src"
+        "nixpkgs": "nixpkgs"
       }
     }
   },

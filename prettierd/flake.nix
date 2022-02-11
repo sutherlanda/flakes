@@ -5,17 +5,14 @@
     # Package sets
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     flake-utils.url = "github:numtide/flake-utils";
-
-    # prettierd
-    prettierd-src = { url = "github:fsouza/prettierd"; flake = false; };
   };
 
-  outputs = inputs@{ self, nixpkgs, flake-utils, prettierd-src, ... }:
+  outputs = inputs@{ self, nixpkgs, flake-utils, ... }:
     flake-utils.lib.eachDefaultSystem (system:
       let
         nodePkgs = import ./default.nix { pkgs = nixpkgs.legacyPackages.${system}; };
         prettierd-overlay = final: prev: with nixpkgs.legacyPackages.${system}; {
-          prettierd = nodePkgs."@fsouza/prettierd";
+          prettierd = nodePkgs.package;
         };
         pkgs = import nixpkgs {
           inherit system;
