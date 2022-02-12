@@ -165,7 +165,7 @@ cmp.setup {
 -- Load formatter
 local formatter = require('formatter')
 local prettierConfig = {
-  exe = "prettier",
+  exe = "prettierd",
   args = {"--stdin-filepath", vim.fn.fnameescape(vim.api.nvim_buf_get_name(0))},
   stdin = true
 }
@@ -212,6 +212,7 @@ nvim_lsp.tsserver.setup({
       eslint_bin = "eslint_d",
       eslint_enable_diagnostics = true,
       eslint_enable_code_actions = true,
+      formatter = "prettierd"
     })
     ts_utils.setup_client(client)
     on_attach(client, bufnr)
