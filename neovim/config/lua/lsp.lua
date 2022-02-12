@@ -154,22 +154,6 @@ cmp.setup {
   },
 }
 
--- Load formatter
-local formatter = require('formatter')
-local prettierConfig = {
-  exe = "prettierd",
-  args = {"--stdin-filepath", vim.fn.fnameescape(vim.api.nvim_buf_get_name(0))},
-  stdin = true
-}
-formatter.setup({
-  filetype = {
-    javascript = prettierConfig,
-    typescript = prettierConfig,
-    javascriptreact = prettierConfig,
-    typescriptreact = prettierConfig
-  }
-})
-
 -- Load language servers and override on_attach.
 local nvim_lsp = require('lspconfig')
 
@@ -196,20 +180,28 @@ nvim_lsp.bashls.setup({
 
 nvim_lsp.tsserver.setup({
   on_attach = function(client, bufnr)
-    client.resolved_capabilities.document_formatting = true
-    client.resolved_capabilities.document_range_formatting = true
+    client.resolved_capabilities.document_formatting = false
+    client.resolved_capabilities.document_range_formatting = false
 
     local ts_utils = require('nvim-lsp-ts-utils')
     ts_utils.setup({
       eslint_bin = "eslint_d",
       eslint_enable_diagnostics = true,
       eslint_enable_code_actions = true,
+      enable_formatting = true,
       formatter = "prettierd"
     })
     ts_utils.setup_client(client)
     on_attach(client, bufnr)
   end,
   capabilities = capabilities
+})
+
+require('null-ls').setup({
+  on_attach = on_attach,
+  sources = {
+    require('null-ls').builtins.formatting.prettierd
+  }
 })
 
 nvim_lsp.pyright.setup({
