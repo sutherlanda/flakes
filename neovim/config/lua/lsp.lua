@@ -209,7 +209,7 @@ nvim_lsp.pyright.setup({
   capabilities = capabilities
 })
 
-vim.cmd([[
+vim.cmd [[
 function! ParseURI(uri)
     return substitute(a:uri, '%\([a-fA-F0-9][a-fA-F0-9]\)', '\=nr2char("0x" . submatch(1))', "g")
 endfunction
@@ -228,4 +228,4 @@ function! RzipOverride()
 endfunction
 
 autocmd VimEnter * call RzipOverride()
-]])
+]]
