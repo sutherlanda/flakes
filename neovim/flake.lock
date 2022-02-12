@@ -232,6 +232,22 @@
         "type": "github"
       }
     },
+    "null-ls": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1644684835,
+        "narHash": "sha256-vEXeEIlK/kpoNTM54IFKpmMUXBQpcyeKgIa7X2Nv59g=",
+        "owner": "jose-elias-alvarez",
+        "repo": "null-ls.nvim",
+        "rev": "51f336638100ba1462e9c1fb0831464e44d02aef",
+        "type": "github"
+      },
+      "original": {
+        "owner": "jose-elias-alvarez",
+        "repo": "null-ls.nvim",
+        "type": "github"
+      }
+    },
     "nvim-cmp": {
       "flake": false,
       "locked": {
@@ -328,6 +344,7 @@
         "nerd-commenter": "nerd-commenter",
         "nerd-tree": "nerd-tree",
         "nixpkgs": "nixpkgs",
+        "null-ls": "null-ls",
         "nvim-cmp": "nvim-cmp",
         "nvim-lsp-ts-utils": "nvim-lsp-ts-utils",
         "nvim-lspconfig": "nvim-lspconfig",
@@ -340,6 +357,7 @@
         "vim-glsl": "vim-glsl",
         "vim-nix": "vim-nix",
         "vim-rooter": "vim-rooter",
+        "vim-rzip": "vim-rzip",
         "vim-sensible": "vim-sensible",
         "vim-surround": "vim-surround"
       }
@@ -453,6 +471,22 @@
       "original": {
         "owner": "airblade",
         "repo": "vim-rooter",
+        "type": "github"
+      }
+    },
+    "vim-rzip": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1626885194,
+        "narHash": "sha256-4mcoav4tyLS6KT5fTvarugoRdVDoe5/5lwU66mEXXTc=",
+        "owner": "lbrayner",
+        "repo": "vim-rzip",
+        "rev": "b04384e6c79bcdc2ac6e3d42dd2d7730f8c02b0d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "lbrayner",
+        "repo": "vim-rzip",
         "type": "github"
       }
     },

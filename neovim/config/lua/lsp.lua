@@ -208,3 +208,24 @@ nvim_lsp.pyright.setup({
   on_attach = on_attach,
   capabilities = capabilities
 })
+
+vim.cmd([[
+function! ParseURI(uri)
+    return substitute(a:uri, '%\([a-fA-F0-9][a-fA-F0-9]\)', '\=nr2char("0x" . submatch(1))', "g")
+endfunction
+
+function! RzipOverride()
+    autocmd! zip BufReadCmd   zipfile:*/*
+    exe "au! zip BufReadCmd ".g:zipPlugin_ext
+    autocmd zip BufReadCmd   zipfile:*/*
+                \ if ParseURI(expand("<amatch>")) !=# expand("<amatch>") |
+                \     sil! exe "bwipeout " . fnameescape(ParseURI(expand("<amatch>"))) |
+                \     exe "keepalt file " . fnameescape(ParseURI(expand("<amatch>"))) |
+                \     sil! exe "bwipeout " . fnameescape(expand("<amatch>")) |
+                \ endif
+    autocmd zip BufReadCmd   zipfile:*/* call rzip#Read(ParseURI(expand("<amatch>")), 1)
+    exe "au zip BufReadCmd ".g:zipPlugin_ext." call rzip#Browse(ParseURI(expand('<amatch>')))"
+endfunction
+
+autocmd VimEnter * call RzipOverride()
+]])
