@@ -26,14 +26,7 @@ local on_attach = function(client, bufnr)
   end
 
   -- Format on save.
-  vim.cmd [[autocmd BufWritePost * FormatWrite]]
-  --vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.formatting_sync()]]
-  --vim.api.nvim_exec([[
-  --augroup FormatAutogroup
-    --autocmd!
-    --autocmd BufWritePost *.ts, *.tsx, *.js, *.jsx, *.rs, *.lua FormatWrite
-  --augroup END
-  --]], true)
+  vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.formatting_sync()]]
 
   -- Set up language server keybindings.
   -- Goto definition/declaration
@@ -67,8 +60,7 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', '<leader>qn', '<cmd>cnext<CR>', opts)
 
   -- Format
-  --buf_set_keymap('n', '<leader>af', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
-  buf_set_keymap('n', '<leader>af', '<cmd>Format<CR>', opts)
+  buf_set_keymap('n', '<leader>af', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 end
 
 
@@ -204,8 +196,8 @@ nvim_lsp.bashls.setup({
 
 nvim_lsp.tsserver.setup({
   on_attach = function(client, bufnr)
-    client.resolved_capabilities.document_formatting = false
-    client.resolved_capabilities.document_range_formatting = false
+    client.resolved_capabilities.document_formatting = true
+    client.resolved_capabilities.document_range_formatting = true
 
     local ts_utils = require('nvim-lsp-ts-utils')
     ts_utils.setup({
