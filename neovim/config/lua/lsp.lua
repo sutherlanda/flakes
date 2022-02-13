@@ -200,7 +200,9 @@ nvim_lsp.tsserver.setup({
 require('null-ls').setup({
   on_attach = on_attach,
   sources = {
-    require('null-ls').builtins.formatting.prettier
+    require('null-ls').builtins.formatting.prettier.with({
+      command = '.yarn/sdks/prettier/index.js'
+    })
   }
 })
 
