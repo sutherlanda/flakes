@@ -178,6 +178,11 @@ nvim_lsp.bashls.setup({
   capabilities = capabilities
 })
 
+nvim_lsp.gopls.setup({
+  on_attach = on_attach,
+  capabilities = capabilities
+})
+
 nvim_lsp.tsserver.setup({
   on_attach = function(client, bufnr)
     client.resolved_capabilities.document_formatting = false
