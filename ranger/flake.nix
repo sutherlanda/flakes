@@ -58,13 +58,22 @@
             					'';
         };
 
+        rangerWrapped = pkgs.symlinkJoin {
+          name = "ranger";
+          paths = [ ranger ];
+          buildInputs = [ pkgs.makeWrapper ];
+          postBuild = ''
+            wrapProgram $out/bin/ranger --set PYTHONPATH "out/lib"
+          '';
+        };
+
       in
       {
         packages = {
-          inherit ranger;
+          ranger = rangerWrapped;
         };
         overlay = final: prev: {
-          inherit ranger;
+          ranger = rangerWrapped;
         };
         defaultPackage = self.packages.${system}.ranger;
       });
