@@ -27,6 +27,7 @@
 
     # Formatting
     formatter-nvim = { url = "github:mhartington/formatter.nvim"; flake = false; };
+    vim-editorconfig = { url = "github:editorconfig/editorconfig-vim"; flake = false; };
 
     # Themes
     tokyonight-nvim = { url = "github:folke/tokyonight.nvim"; flake = false; };
@@ -80,6 +81,7 @@
           "vim-glsl"
           "nvim-treesitter"
           "formatter-nvim"
+          "vim-editorconfig"
           "tokyonight-nvim"
           "nerd-tree"
           "nerd-commenter"

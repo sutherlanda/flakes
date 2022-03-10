@@ -354,6 +354,7 @@
         "telescope-fzy-native": "telescope-fzy-native",
         "toggleterm": "toggleterm",
         "tokyonight-nvim": "tokyonight-nvim",
+        "vim-editorconfig": "vim-editorconfig",
         "vim-glsl": "vim-glsl",
         "vim-nix": "vim-nix",
         "vim-rooter": "vim-rooter",
@@ -423,6 +424,22 @@
       "original": {
         "owner": "folke",
         "repo": "tokyonight.nvim",
+        "type": "github"
+      }
+    },
+    "vim-editorconfig": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1642820146,
+        "narHash": "sha256-qFLXqhV+ZVhxoq+QoxWSDUrg8W/+qChJuCd4hSJqy28=",
+        "owner": "editorconfig",
+        "repo": "editorconfig-vim",
+        "rev": "a8e3e66deefb6122f476c27cee505aaae93f7109",
+        "type": "github"
+      },
+      "original": {
+        "owner": "editorconfig",
+        "repo": "editorconfig-vim",
         "type": "github"
       }
     },
