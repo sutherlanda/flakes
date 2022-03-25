@@ -60,6 +60,7 @@ require'toggleterm'.setup({
   open_mapping = [[<leader>tt]],
   hide_numbers = true,
   start_in_insert = true,
+  insert_mappings = false,
   direction = 'float',
   close_on_exit = true,
 })
