@@ -78,6 +78,7 @@
           "nvim-lspconfig"
           "nvim-lsp-ts-utils"
           "null-ls"
+          "haskell-vim"
           "vim-nix"
           "vim-glsl"
           "nvim-treesitter"
