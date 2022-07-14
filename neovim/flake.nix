@@ -122,7 +122,6 @@
 
         overlay = final: prev: {
           neovim = packages.neovim;
-	  config = ./config;
         };
 
         defaultPackage = packages.neovim;
