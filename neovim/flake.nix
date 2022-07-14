@@ -121,7 +121,7 @@
         };
 
         overlay = final: prev: {
-          inherit neovim;
+          neovim = packages.neovim;
 	  config = ./config;
         };
 
