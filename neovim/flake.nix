@@ -103,8 +103,8 @@
           vimAlias = true;
           configure = {
             customRC = ''
-              luafile ${./config/lua/global.lua}
-              luafile ${./config/lua/lsp.lua}
+              luafile ${config/lua/global.lua}
+              luafile ${config/lua/lsp.lua}
             '';
             packages.myVimPackage = {
               start = map buildPlugin plugins;
@@ -116,12 +116,10 @@
       rec {
         packages = with pkgs; {
           inherit neovim;
-          config = ./config;
         };
 
         overlay = final: prev: {
           inherit neovim;
-	  config = ./config;
         };
 
         defaultPackage = packages.neovim;
