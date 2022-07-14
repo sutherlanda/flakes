@@ -103,6 +103,7 @@
           vimAlias = true;
           configure = {
             customRC = ''
+		test should break
               luafile ${config/lua/global.lua}
               luafile ${config/lua/lsp.lua}
             '';
