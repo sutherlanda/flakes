@@ -6,9 +6,6 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     flake-utils.url = "github:numtide/flake-utils";
 
-    # Neovim nightly
-    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
-
     ### Plugins ###
 
     # LSP 
@@ -57,12 +54,11 @@
     vim-rzip = { url = "github:lbrayner/vim-rzip"; flake = false; };
   };
 
-  outputs = inputs@{ self, nixpkgs, flake-utils, neovim-nightly-overlay, ... }:
+  outputs = inputs@{ self, nixpkgs, flake-utils, ... }:
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = import nixpkgs {
           inherit system;
-          overlays = [ neovim-nightly-overlay.overlay ];
         };
 
         buildPlugin = name: pkgs.vimUtils.buildVimPluginFrom2Nix {
