@@ -116,10 +116,12 @@
       rec {
         packages = with pkgs; {
           inherit neovim;
+          config = ./config;
         };
 
         overlay = final: prev: {
           inherit neovim;
+	  config = ./config;
         };
 
         defaultPackage = packages.neovim;
