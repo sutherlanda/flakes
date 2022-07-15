@@ -197,6 +197,9 @@ nvim_lsp.tsserver.setup({
       formatter = "prettierd"
     })
     ts_utils.setup_client(client)
+
+    require("lsp_signature").on_attach()
+
     on_attach(client, bufnr)
   end,
   capabilities = capabilities
