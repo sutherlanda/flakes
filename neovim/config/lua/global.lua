@@ -10,8 +10,9 @@ vim.opt.foldenable = false
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
-vim.g.tokyonight_style = 'night'
+--vim.g.tokyonight_style = 'night'
 vim.cmd([[colorscheme tokyonight]])
+vim.cmd([[colorscheme nightfox]])
 vim.g.rooter_patterns = {'.git', '.git/', 'shell.sh', 'shell.nix'}
 vim.g.rooter_silent_chdir = 1
 vim.cmd('syntax enable')
@@ -21,7 +22,7 @@ vim.cmd('filetype plugin indent on')
 require'lualine'.setup({
   options = {
     icons_enabled = true,
-    theme = 'tokyonight'
+    theme = 'nightfox'
   },
   sections = {
     lualine_c = {
@@ -55,16 +56,6 @@ vim.cmd('set wildignore+=*.so,*.swp,*.zip,*.hi,*.o,*/node_modules/*,*/dist/*,*/.
 vim.cmd('let mapleader=","')
 local opts = { noremap = true, silent = true }
 
--- Toggle term
-require'toggleterm'.setup({
-  open_mapping = [[<leader>tt]],
-  hide_numbers = true,
-  start_in_insert = true,
-  insert_mappings = false,
-  direction = 'float',
-  close_on_exit = true,
-})
-
 require'gitsigns'.setup({})
 local gs = package.loaded.gitsigns
 
@@ -81,7 +72,7 @@ vim.cmd('autocmd! BufNewFile,BufRead *.vs,*.fs,*.vert,*.frag set ft=glsl')
 vim.api.nvim_set_keymap('n', '<leader>gb', '<cmd>Gitsigns toggle_current_line_blame<CR>', opts)
 
 -- Misc helpers
-vim.api.nvim_set_keymap('n', '<leader>f', ':set filetype=', { noremap = true })                        -- set filetype helper
+vim.api.nvim_set_keymap('n', '<leader>f', ':set filetype=', { noremap = true })              -- set filetype helper
 vim.api.nvim_set_keymap('n', '<leader>h', '<cmd>nohl<CR>', opts)                             -- clear highlighted search items
 vim.api.nvim_set_keymap('n', '<leader>n', '<cmd>set invnumber invrelativenumber<CR>', opts)  -- toggle line numbering
 vim.api.nvim_set_keymap('n', '<leader><leader>', '<cmd>b#<CR>', opts)                        -- switch to last active buffer

@@ -26,6 +26,7 @@
 
     # Themes
     tokyonight-nvim = { url = "github:folke/tokyonight.nvim"; flake = false; };
+    nightfox-nvim = { url = "github:EdenEast/nightfox.nvim"; flake = false; };
 
     # NERD
     nerd-tree = { url = "github:preservim/nerdtree"; flake = false; };
@@ -51,7 +52,6 @@
     telescope = { url = "github:nvim-telescope/telescope.nvim"; flake = false; };
     telescope-fzy-native = { url = "github:nvim-telescope/telescope-fzy-native.nvim"; flake = false; };
     plenary = { url = "github:nvim-lua/plenary.nvim"; flake = false; };
-    toggleterm = { url = "github:akinsho/toggleterm.nvim"; flake = false; };
     vim-rzip = { url = "github:lbrayner/vim-rzip"; flake = false; };
   };
 
@@ -80,6 +80,7 @@
           "formatter-nvim"
           "vim-editorconfig"
           "tokyonight-nvim"
+          "nightfox-nvim"
           "nerd-tree"
           "nerd-commenter"
           "nvim-cmp"
@@ -97,7 +98,6 @@
           "telescope"
           "telescope-fzy-native"
           "plenary"
-          "toggleterm"
           "vim-rzip"
         ];
 
