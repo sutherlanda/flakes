@@ -11,8 +11,11 @@ vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 --vim.g.tokyonight_style = 'night'
-vim.cmd([[colorscheme tokyonight]])
-vim.cmd([[colorscheme nightfox]])
+--vim.cmd([[colorscheme tokyonight]])
+--vim.cmd([[colorscheme nightfox]])
+vim.g.gruvbox_baby_background_color = "dark"
+vim.g.gruvbox_baby_telescope_theme = 1
+vim.cmd([[colorscheme gruvbox-baby]])
 vim.g.rooter_patterns = {'.git', '.git/', 'shell.sh', 'shell.nix'}
 vim.g.rooter_silent_chdir = 1
 vim.cmd('syntax enable')
@@ -22,7 +25,7 @@ vim.cmd('filetype plugin indent on')
 require'lualine'.setup({
   options = {
     icons_enabled = true,
-    theme = 'nightfox'
+    theme = 'gruvbox-baby'
   },
   sections = {
     lualine_c = {
