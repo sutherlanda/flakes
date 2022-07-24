@@ -397,6 +397,7 @@
         "tokyonight-nvim": "tokyonight-nvim",
         "vim-glsl": "vim-glsl",
         "vim-nix": "vim-nix",
+        "vim-python-virtualenv": "vim-python-virtualenv",
         "vim-rooter": "vim-rooter",
         "vim-rzip": "vim-rzip",
         "vim-sensible": "vim-sensible",
@@ -480,6 +481,22 @@
       "original": {
         "owner": "LnL7",
         "repo": "vim-nix",
+        "type": "github"
+      }
+    },
+    "vim-python-virtualenv": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1640412467,
+        "narHash": "sha256-UGVU+m7sDSDG/U3vBH9s4VY6f9ArQfgaE4Zl5fzyi7E=",
+        "owner": "sansyrox",
+        "repo": "vim-python-virtualenv",
+        "rev": "82730c6060be1ac3ac9bcbd3690704c1b5236329",
+        "type": "github"
+      },
+      "original": {
+        "owner": "sansyrox",
+        "repo": "vim-python-virtualenv",
         "type": "github"
       }
     },

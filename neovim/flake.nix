@@ -53,6 +53,7 @@
     telescope-fzy-native = { url = "github:nvim-telescope/telescope-fzy-native.nvim"; flake = false; };
     plenary = { url = "github:nvim-lua/plenary.nvim"; flake = false; };
     vim-rzip = { url = "github:lbrayner/vim-rzip"; flake = false; };
+    vim-python-virtualenv = { url = "github:sansyrox/vim-python-virtualenv"; flake = false; };
   };
 
   outputs = inputs@{ self, nixpkgs, flake-utils, ... }:
@@ -99,6 +100,7 @@
           "telescope-fzy-native"
           "plenary"
           "vim-rzip"
+          "vim-python-virtualenv"
         ];
 
         neovim = pkgs.wrapNeovim pkgs.neovim-unwrapped {

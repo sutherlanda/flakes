@@ -10,9 +10,6 @@ vim.opt.foldenable = false
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
---vim.g.tokyonight_style = 'night'
---vim.cmd([[colorscheme tokyonight]])
---vim.cmd([[colorscheme nightfox]])
 vim.g.gruvbox_baby_background_color = "dark"
 vim.g.gruvbox_baby_telescope_theme = 1
 vim.cmd([[colorscheme gruvbox-baby]])
@@ -67,6 +64,9 @@ vim.cmd('autocmd! BufNewFile,BufRead *.vs,*.fs,*.vert,*.frag set ft=glsl')
 
 -- Git signs
 vim.api.nvim_set_keymap('n', '<leader>gb', '<cmd>Gitsigns toggle_current_line_blame<CR>', opts)
+
+-- Python virtual env
+vim.g.python3_host_prog='/usr/bin/python3'
 
 -- Misc helpers
 vim.api.nvim_set_keymap('n', '<leader>f', ':set filetype=', { noremap = true })              -- set filetype helper
