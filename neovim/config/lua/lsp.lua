@@ -36,6 +36,9 @@ local on_attach = function(client, bufnr)
   -- References
   buf_set_keymap('n', '<leader>ar', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
 
+  -- Signature help
+  buf_set_keymap('n', '<leader>as', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
+
   -- Hover
   buf_set_keymap('n', '<leader>ah', '<cmd>lua vim.lsp.buf.hover({focusable=false})<CR>', opts)
 
