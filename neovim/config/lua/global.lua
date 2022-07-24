@@ -62,12 +62,6 @@ local opts = { noremap = true, silent = true }
 require'gitsigns'.setup({})
 local gs = package.loaded.gitsigns
 
-vim.cmd([[
-  augroup _editorconfig
-  autocmd BufEnter * :EditorConfigReload
-  augroup END
-]])
-
 -- Set file types
 vim.cmd('autocmd! BufNewFile,BufRead *.vs,*.fs,*.vert,*.frag set ft=glsl')
 
