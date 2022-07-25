@@ -66,7 +66,7 @@ vim.cmd('autocmd! BufNewFile,BufRead *.vs,*.fs,*.vert,*.frag set ft=glsl')
 vim.api.nvim_set_keymap('n', '<leader>gb', '<cmd>Gitsigns toggle_current_line_blame<CR>', opts)
 
 -- Python virtual env
-vim.g.python3_host_prog='/usr/bin/python3'
+vim.g.python3_host_prog='python3'
 
 -- Misc helpers
 vim.api.nvim_set_keymap('n', '<leader>f', ':set filetype=', { noremap = true })              -- set filetype helper
