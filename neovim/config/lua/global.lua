@@ -81,8 +81,6 @@ vim.api.nvim_set_keymap('', '<C-p>', '<cmd>Telescope find_files<CR>', opts)
 vim.api.nvim_set_keymap('', '<C-\\>', '<cmd>Telescope live_grep<CR>', opts)
 vim.api.nvim_set_keymap('n', '<leader>b', '<cmd>Telescope buffers<CR>', opts)
 
--- NERDTree
-vim.api.nvim_set_keymap('n', '<leader>to', '<cmd>NERDTreeFocus<CR>', opts)        -- NERDTree focus/open
-vim.api.nvim_set_keymap('n', '<leader>tc', '<cmd>NERDTreeClose<CR>', opts)        -- NERDTree close 
-vim.api.nvim_set_keymap('n', '<leader>tr', '<cmd>NERDTreeRefreshRoot<CR>', opts)  -- NERDTree refresh 
-
+-- nvim-tree
+require('nvim-tree').setup()
+vim.api.nvim_set_keymap('n', '<leader>t', '<cmd>NvimTreeToggle<CR>', opts)

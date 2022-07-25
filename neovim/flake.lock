@@ -223,22 +223,6 @@
         "type": "github"
       }
     },
-    "nerd-tree": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1655115046,
-        "narHash": "sha256-8e+PlvG+x3lPqbhP4YpGtXcO0bPJC4EVJ3t6AjMU4ws=",
-        "owner": "preservim",
-        "repo": "nerdtree",
-        "rev": "fc85a6f07c2cd694be93496ffad75be126240068",
-        "type": "github"
-      },
-      "original": {
-        "owner": "preservim",
-        "repo": "nerdtree",
-        "type": "github"
-      }
-    },
     "nightfox-nvim": {
       "flake": false,
       "locked": {
@@ -335,6 +319,22 @@
         "type": "github"
       }
     },
+    "nvim-tree": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1658477458,
+        "narHash": "sha256-pRT1O2ImzrcDqdXwB795KyZHYFnrmpsyiyUB5Q+rSKU=",
+        "owner": "kyazdani42",
+        "repo": "nvim-tree.lua",
+        "rev": "d927e89aa9b8a88dba5c58bfbf67586de01ed8dd",
+        "type": "github"
+      },
+      "original": {
+        "owner": "kyazdani42",
+        "repo": "nvim-tree.lua",
+        "type": "github"
+      }
+    },
     "nvim-treesitter": {
       "flake": false,
       "locked": {
@@ -383,13 +383,13 @@
         "lualine-nvim": "lualine-nvim",
         "luasnip": "luasnip",
         "nerd-commenter": "nerd-commenter",
-        "nerd-tree": "nerd-tree",
         "nightfox-nvim": "nightfox-nvim",
         "nixpkgs": "nixpkgs",
         "null-ls": "null-ls",
         "nvim-cmp": "nvim-cmp",
         "nvim-lsp-ts-utils": "nvim-lsp-ts-utils",
         "nvim-lspconfig": "nvim-lspconfig",
+        "nvim-tree": "nvim-tree",
         "nvim-treesitter": "nvim-treesitter",
         "plenary": "plenary",
         "telescope": "telescope",

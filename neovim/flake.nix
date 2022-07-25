@@ -29,8 +29,10 @@
     gruvbox-baby-nvim = { url = "github:luisiacc/gruvbox-baby"; flake = false; };
 
     # NERD
-    nerd-tree = { url = "github:preservim/nerdtree"; flake = false; };
     nerd-commenter = { url = "github:preservim/nerdcommenter"; flake = false; };
+
+    # nvim-tree
+    nvim-tree = { url = "github:kyazdani42/nvim-tree.lua"; flake = false; };
 
     # Completion
     nvim-cmp = { url = "github:hrsh7th/nvim-cmp"; flake = false; };
@@ -82,8 +84,8 @@
           "tokyonight-nvim"
           "nightfox-nvim"
           "gruvbox-baby-nvim"
-          "nerd-tree"
           "nerd-commenter"
+          "nvim-tree"
           "nvim-cmp"
           "cmp-nvim-lsp"
           "cmp-path"
