@@ -196,11 +196,11 @@ nvim_lsp.tsserver.setup({
 
     local ts_utils = require('nvim-lsp-ts-utils')
     ts_utils.setup({
-      --eslint_bin = "eslint_d",
+      eslint_bin = "eslint_d",
       eslint_enable_diagnostics = true,
       eslint_enable_code_actions = true,
       enable_formatting = true,
-      --formatter = "prettierd"
+      formatter = "prettier"
     })
     ts_utils.setup_client(client)
 
@@ -215,7 +215,7 @@ local null_ls = require('null-ls')
 null_ls.setup({
   on_attach = on_attach,
   sources = {
-    null_ls.builtins.formatting.prettierd,
+    null_ls.builtins.formatting.prettier,
     null_ls.builtins.formatting.eslint_d,
     null_ls.builtins.formatting.autopep8
   }
