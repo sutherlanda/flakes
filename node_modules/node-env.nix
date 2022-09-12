@@ -395,7 +395,7 @@ let
     , buildInputs ? []
     , production ? true
     , npmFlags ? ""
-    , dontNpmInstall ? true
+    , dontNpmInstall ? false
     , bypassCache ? false
     , reconstructLock ? false
     , preRebuild ? ""
@@ -485,7 +485,7 @@ let
     , buildInputs ? []
     , production ? true
     , npmFlags ? ""
-    , dontNpmInstall ? true
+    , dontNpmInstall ? false
     , bypassCache ? false
     , reconstructLock ? false
     , dontStrip ? true
@@ -556,7 +556,7 @@ let
     , buildInputs ? []
     , production ? true
     , npmFlags ? ""
-    , dontNpmInstall ? true
+    , dontNpmInstall ? false
     , bypassCache ? false
     , reconstructLock ? false
     , dontStrip ? true
