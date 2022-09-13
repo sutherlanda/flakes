@@ -127,19 +127,19 @@
         "type": "github"
       }
     },
-    "gruvbox-baby-nvim": {
+    "gruvbox-nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1658159578,
-        "narHash": "sha256-aHJleksJ6ypbztFMIn8TVbLUQnd/ZlKiPuIsfOD2HjE=",
-        "owner": "luisiacc",
-        "repo": "gruvbox-baby",
-        "rev": "4334547b6e98c77d065d2b0e801523a8f84792d9",
+        "lastModified": 1661795605,
+        "narHash": "sha256-3Jmi05DmKDLdFbHGA45ggdERNXmPRf4slhoq+PpDP+s=",
+        "owner": "ellisonleao",
+        "repo": "gruvbox.nvim",
+        "rev": "c7aaa3ec3f431d90b0b9382cb52bebffc0e4283a",
         "type": "github"
       },
       "original": {
-        "owner": "luisiacc",
-        "repo": "gruvbox-baby",
+        "owner": "ellisonleao",
+        "repo": "gruvbox.nvim",
         "type": "github"
       }
     },
@@ -377,7 +377,7 @@
         "formatter-nvim": "formatter-nvim",
         "fugitive": "fugitive",
         "gitsigns": "gitsigns",
-        "gruvbox-baby-nvim": "gruvbox-baby-nvim",
+        "gruvbox-nvim": "gruvbox-nvim",
         "haskell-vim": "haskell-vim",
         "lsp-signature": "lsp-signature",
         "lualine-nvim": "lualine-nvim",

@@ -12,7 +12,7 @@ vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 vim.g.gruvbox_baby_background_color = "dark"
 vim.g.gruvbox_baby_telescope_theme = 1
-vim.cmd([[colorscheme gruvbox-baby]])
+vim.cmd([[colorscheme gruvbox]])
 vim.g.rooter_patterns = {'.git', '.git/', 'shell.sh', 'shell.nix'}
 vim.g.rooter_silent_chdir = 1
 vim.cmd('syntax enable')
@@ -22,7 +22,7 @@ vim.cmd('filetype plugin indent on')
 require'lualine'.setup({
   options = {
     icons_enabled = true,
-    theme = 'gruvbox-baby'
+    theme = 'gruvbox'
   },
   sections = {
     lualine_c = {

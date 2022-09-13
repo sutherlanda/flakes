@@ -26,7 +26,7 @@
     # Themes
     tokyonight-nvim = { url = "github:folke/tokyonight.nvim"; flake = false; };
     nightfox-nvim = { url = "github:EdenEast/nightfox.nvim"; flake = false; };
-    gruvbox-baby-nvim = { url = "github:luisiacc/gruvbox-baby"; flake = false; };
+    gruvbox-nvim = { url = "github:ellisonleao/gruvbox.nvim"; flake = false; };
 
     # NERD
     nerd-commenter = { url = "github:preservim/nerdcommenter"; flake = false; };
@@ -83,7 +83,7 @@
           "formatter-nvim"
           "tokyonight-nvim"
           "nightfox-nvim"
-          "gruvbox-baby-nvim"
+          "gruvbox-nvim"
           "nerd-commenter"
           "nvim-tree"
           "nvim-cmp"
