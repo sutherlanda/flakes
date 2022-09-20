@@ -13,7 +13,6 @@
     nvim-lsp-ts-utils = { url = "github:jose-elias-alvarez/nvim-lsp-ts-utils"; flake = false; };
     null-ls = { url = "github:jose-elias-alvarez/null-ls.nvim"; flake = false; };
     haskell-vim = { url = "github:neovimhaskell/haskell-vim"; flake = false; };
-    lsp-signature = { url = "github:ray-x/lsp_signature.nvim"; flake = false; };
 
     # Syntax highlighting
     vim-nix = { url = "github:LnL7/vim-nix"; flake = false; };
@@ -76,7 +75,6 @@
           "nvim-lsp-ts-utils"
           "null-ls"
           "haskell-vim"
-          "lsp-signature"
           "vim-nix"
           "vim-glsl"
           "nvim-treesitter"
