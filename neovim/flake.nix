@@ -64,9 +64,9 @@
       let
         pkgs = import nixpkgs {
           inherit system;
-          overlays = [
-            inputs.neovim-nightly-overlay.overlay
-          ];
+          #overlays = [
+          #inputs.neovim-nightly-overlay.overlay
+          #];
         };
 
         buildPlugin = name: pkgs.vimUtils.buildVimPluginFrom2Nix {
