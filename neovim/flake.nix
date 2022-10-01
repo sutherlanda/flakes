@@ -5,6 +5,8 @@
     # Package sets
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     flake-utils.url = "github:numtide/flake-utils";
+    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
+
 
     ### Plugins ###
 
@@ -62,6 +64,9 @@
       let
         pkgs = import nixpkgs {
           inherit system;
+          overlays = [
+            inputs.neovim-nightly-overlay.overlay
+          ];
         };
 
         buildPlugin = name: pkgs.vimUtils.buildVimPluginFrom2Nix {
