@@ -26,7 +26,7 @@ local on_attach = function(client, bufnr)
   end
 
   -- Format on save.
-  vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.formatting_sync()]]
+  vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
 
   -- Set up language server keybindings.
   -- Goto definition/declaration
