@@ -187,6 +187,7 @@ nvim_lsp.gopls.setup({
 })
 
 nvim_lsp.tsserver.setup({
+  root_dir = require('lspconfig.util').root_pattern('.git'),
   on_attach = function(client, bufnr)
     client.server_capabilities.document_formatting = false
     client.server_capabilities.document_range_formatting = false
