@@ -375,22 +375,6 @@
         "type": "github"
       }
     },
-    "nvim-lsp-ts-utils": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1658021832,
-        "narHash": "sha256-38YOgLDtku2BPCaNEmX0555x1QmHuuDSCZL274bBhcg=",
-        "owner": "jose-elias-alvarez",
-        "repo": "nvim-lsp-ts-utils",
-        "rev": "0a6a16ef292c9b61eac6dad00d52666c7f84b0e7",
-        "type": "github"
-      },
-      "original": {
-        "owner": "jose-elias-alvarez",
-        "repo": "nvim-lsp-ts-utils",
-        "type": "github"
-      }
-    },
     "nvim-lspconfig": {
       "flake": false,
       "locked": {
@@ -439,6 +423,22 @@
         "type": "github"
       }
     },
+    "nvim-typescript": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1663338982,
+        "narHash": "sha256-zI6sXe6ClGpixhZCEbjVlFVGxy8WsnZJq5rRdz04jTY=",
+        "owner": "jose-elias-alvarez",
+        "repo": "typescript.nvim",
+        "rev": "3be39e4a6f329e3c9c2ed49783b89aebd5c69d0a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "jose-elias-alvarez",
+        "repo": "typescript.nvim",
+        "type": "github"
+      }
+    },
     "plenary": {
       "flake": false,
       "locked": {
@@ -475,10 +475,10 @@
         "nixpkgs": "nixpkgs_3",
         "null-ls": "null-ls",
         "nvim-cmp": "nvim-cmp",
-        "nvim-lsp-ts-utils": "nvim-lsp-ts-utils",
         "nvim-lspconfig": "nvim-lspconfig",
         "nvim-tree": "nvim-tree",
         "nvim-treesitter": "nvim-treesitter",
+        "nvim-typescript": "nvim-typescript",
         "plenary": "plenary",
         "telescope": "telescope",
         "telescope-fzy-native": "telescope-fzy-native",

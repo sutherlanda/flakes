@@ -191,15 +191,17 @@ nvim_lsp.tsserver.setup({
     client.server_capabilities.document_formatting = false
     client.server_capabilities.document_range_formatting = false
 
-    local ts_utils = require('nvim-lsp-ts-utils')
-    ts_utils.setup({
-      eslint_bin = "eslint_d",
-      eslint_enable_diagnostics = true,
-      eslint_enable_code_actions = true,
-      enable_formatting = true,
-      formatter = "prettierd"
-    })
-    ts_utils.setup_client(client)
+    require('typescript').setup({})
+
+    --local ts_utils = require('nvim-lsp-ts-utils')
+    --ts_utils.setup({
+      --eslint_bin = "eslint_d",
+      --eslint_enable_diagnostics = true,
+      --eslint_enable_code_actions = true,
+      --enable_formatting = true,
+      --formatter = "prettierd"
+    --})
+    --ts_utils.setup_client(client)
 
     on_attach(client, bufnr)
   end,

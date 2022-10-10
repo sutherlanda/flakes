@@ -12,7 +12,7 @@
 
     # LSP 
     nvim-lspconfig = { url = "github:neovim/nvim-lspconfig"; flake = false; };
-    nvim-lsp-ts-utils = { url = "github:jose-elias-alvarez/nvim-lsp-ts-utils"; flake = false; };
+    nvim-typescript = { url = "github:jose-elias-alvarez/typescript.nvim"; flake = false; };
     null-ls = { url = "github:jose-elias-alvarez/null-ls.nvim"; flake = false; };
     haskell-vim = { url = "github:neovimhaskell/haskell-vim"; flake = false; };
 
@@ -77,7 +77,7 @@
 
         plugins = [
           "nvim-lspconfig"
-          "nvim-lsp-ts-utils"
+          "nvim-typescript"
           "null-ls"
           "haskell-vim"
           "vim-nix"
