@@ -190,19 +190,8 @@ nvim_lsp.tsserver.setup({
   on_attach = function(client, bufnr)
     client.server_capabilities.document_formatting = false
     client.server_capabilities.document_range_formatting = false
-
     require('typescript').setup({})
-
-    --local ts_utils = require('nvim-lsp-ts-utils')
-    --ts_utils.setup({
-      --eslint_bin = "eslint_d",
-      --eslint_enable_diagnostics = true,
-      --eslint_enable_code_actions = true,
-      --enable_formatting = true,
-      --formatter = "prettierd"
-    --})
-    --ts_utils.setup_client(client)
-
+    buf_set_keymap('n', '<leader>ag', '<cmd>:TypescriptGoToSourceDefinition<CR>', opts)
     on_attach(client, bufnr)
   end,
   capabilities = capabilities
