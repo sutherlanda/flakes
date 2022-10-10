@@ -30,7 +30,7 @@ local on_attach = function(client, bufnr)
 
   -- Set up language server keybindings.
   -- Goto definition/declaration
-  buf_set_keymap('n', '<leader>ag', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
+  --buf_set_keymap('n', '<leader>ag', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
   buf_set_keymap('n', '<leader>aG', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
 
   -- References
