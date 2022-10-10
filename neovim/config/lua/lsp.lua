@@ -26,7 +26,7 @@ local on_attach = function(client, bufnr)
   end
 
   -- Format on save.
-  vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
+  vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.formatting_sync()]]
 
   -- Set up language server keybindings.
   -- Goto definition/declaration
@@ -189,8 +189,8 @@ nvim_lsp.gopls.setup({
 nvim_lsp.tsserver.setup({
   root_dir = require('lspconfig.util').root_pattern('.git'),
   on_attach = function(client, bufnr)
-    client.server_capabilities.document_formatting = false
-    client.server_capabilities.document_range_formatting = false
+    client.resolved_capabilities.document_formatting = false
+    client.resolved_capabilities.document_range_formatting = false
     require('typescript').setup({})
     on_attach(client, bufnr)
   end,
