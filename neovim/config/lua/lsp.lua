@@ -30,7 +30,7 @@ local on_attach = function(client, bufnr)
 
   -- Set up language server keybindings.
   -- Goto definition/declaration
-  --buf_set_keymap('n', '<leader>ag', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
+  buf_set_keymap('n', '<leader>ag', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
   buf_set_keymap('n', '<leader>aG', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
 
   -- References
@@ -192,7 +192,6 @@ nvim_lsp.tsserver.setup({
     client.server_capabilities.document_formatting = false
     client.server_capabilities.document_range_formatting = false
     require('typescript').setup({})
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>ag', '<cmd>:TypescriptGoToSourceDefinition<CR>', opts)
     on_attach(client, bufnr)
   end,
   capabilities = capabilities
