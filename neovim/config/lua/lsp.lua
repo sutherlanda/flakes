@@ -187,24 +187,24 @@ nvim_lsp.gopls.setup({
 })
 
 nvim_lsp.tsserver.setup({
-  root_dir = require('lspconfig.util').root_pattern('.git'),
   on_attach = function(client, bufnr)
     client.resolved_capabilities.document_formatting = false
     client.resolved_capabilities.document_range_formatting = false
-    require('typescript').setup({})
+    --require('typescript').setup({})
     on_attach(client, bufnr)
   end,
   capabilities = capabilities
 })
---local null_ls = require('null-ls')
---null_ls.setup({
-  --on_attach = on_attach,
-  --sources = {
-    --null_ls.builtins.formatting.prettierd,
-    --null_ls.builtins.formatting.eslint_d,
-    --null_ls.builtins.formatting.autopep8
-  --}
---})
+
+local null_ls = require('null-ls')
+null_ls.setup({
+  on_attach = on_attach,
+  sources = {
+    null_ls.builtins.formatting.prettierd,
+    null_ls.builtins.formatting.eslint_d,
+    null_ls.builtins.formatting.autopep8
+  }
+})
 
 nvim_lsp.pyright.setup({
   on_attach = on_attach,
