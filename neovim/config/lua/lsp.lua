@@ -196,15 +196,15 @@ nvim_lsp.tsserver.setup({
   capabilities = capabilities
 })
 
-local null_ls = require('null-ls')
-null_ls.setup({
-  on_attach = on_attach,
-  sources = {
-    null_ls.builtins.formatting.prettierd,
-    null_ls.builtins.formatting.eslint_d,
-    null_ls.builtins.formatting.autopep8
-  }
-})
+--local null_ls = require('null-ls')
+--null_ls.setup({
+  --on_attach = on_attach,
+  --sources = {
+    --null_ls.builtins.formatting.prettierd,
+    --null_ls.builtins.formatting.eslint_d,
+    --null_ls.builtins.formatting.autopep8
+  --}
+--})
 
 nvim_lsp.pyright.setup({
   on_attach = on_attach,
