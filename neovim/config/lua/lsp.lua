@@ -193,7 +193,6 @@ nvim_lsp.tsserver.setup({
     on_attach(client, bufnr)
   end,
   capabilities = capabilities,
-  root_dir = function() return vim.loop.cwd() end
 })
 
 local null_ls = require('null-ls')
