@@ -480,6 +480,7 @@
         "nvim-treesitter": "nvim-treesitter",
         "nvim-typescript": "nvim-typescript",
         "plenary": "plenary",
+        "rust-tools": "rust-tools",
         "telescope": "telescope",
         "telescope-fzy-native": "telescope-fzy-native",
         "tokyonight-nvim": "tokyonight-nvim",
@@ -490,6 +491,22 @@
         "vim-rzip": "vim-rzip",
         "vim-sensible": "vim-sensible",
         "vim-surround": "vim-surround"
+      }
+    },
+    "rust-tools": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1667710081,
+        "narHash": "sha256-7lmLg2ePoeBMHewfgRAt79HMNAF3HWns1PKTe46cJXk=",
+        "owner": "simrat39",
+        "repo": "rust-tools.nvim",
+        "rev": "99fd1238c6068d0637df30b6cee9a264334015e9",
+        "type": "github"
+      },
+      "original": {
+        "owner": "simrat39",
+        "repo": "rust-tools.nvim",
+        "type": "github"
       }
     },
     "telescope": {

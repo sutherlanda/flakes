@@ -157,13 +157,17 @@ cmp.setup {
   },
 }
 
+-- Rust tools
+local rt = require('rust-tools')
+
+rt.setup({
+  server = {
+    on_attach = on_attach
+  }
+})
+
 -- Load language servers and override on_attach.
 local nvim_lsp = require('lspconfig')
-
-nvim_lsp.rust_analyzer.setup({
-  on_attach = on_attach,
-  capabilities = capabilities
-})
 
 nvim_lsp.hls.setup({
   on_attach = on_attach,
