@@ -192,16 +192,17 @@ nvim_lsp.tsserver.setup({
     client.server_capabilities.documentRangeFormattingProvider = false
     on_attach(client, bufnr)
   end,
-  capabilities = capabilities,
+  capabilities = capabilities
 })
 
 local null_ls = require('null-ls')
 null_ls.setup({
+  debug = true,
   on_attach = on_attach,
   sources = {
     null_ls.builtins.formatting.prettierd,
     null_ls.builtins.formatting.eslint_d,
-    null_ls.builtins.formatting.autopep8,
+    --null_ls.builtins.formatting.autopep8,
     null_ls.builtins.diagnostics.eslint_d
   }
 })
