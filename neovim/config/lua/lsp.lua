@@ -187,6 +187,11 @@ nvim_lsp.gopls.setup({
 })
 
 nvim_lsp.tsserver.setup({
+  init_options = {
+    preferences = {
+      disableSuggestions = true,
+    },
+  },
   on_attach = function(client, bufnr)
     client.server_capabilities.documentFormattingProvider = false
     client.server_capabilities.documentRangeFormattingProvider = false
