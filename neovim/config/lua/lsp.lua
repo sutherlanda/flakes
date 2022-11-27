@@ -162,7 +162,10 @@ local nvim_lsp = require('lspconfig')
 
 nvim_lsp.rust_analyzer.setup({
   on_attach = on_attach,
-  capabilities = capabilities
+  capabilities = capabilities,
+  checkOnSave = {
+    command = "clippy"
+  }
 })
 
 nvim_lsp.hls.setup({
