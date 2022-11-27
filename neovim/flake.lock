@@ -64,6 +64,22 @@
         "type": "github"
       }
     },
+    "edgedb-vim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1666800460,
+        "narHash": "sha256-B+QoPTX/NwZfi8bVnSSlLli9qc12PyGUDMg4UYxpUgQ=",
+        "owner": "edgedb",
+        "repo": "edgedb-vim",
+        "rev": "a888b285a30ede6f5fcb03617733b3974356c450",
+        "type": "github"
+      },
+      "original": {
+        "owner": "edgedb",
+        "repo": "edgedb-vim",
+        "type": "github"
+      }
+    },
     "flake-compat": {
       "flake": false,
       "locked": {
@@ -461,6 +477,7 @@
         "cmp-cmdline": "cmp-cmdline",
         "cmp-nvim-lsp": "cmp-nvim-lsp",
         "cmp-path": "cmp-path",
+        "edgedb-vim": "edgedb-vim",
         "flake-utils": "flake-utils",
         "formatter-nvim": "formatter-nvim",
         "fugitive": "fugitive",

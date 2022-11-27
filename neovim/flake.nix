@@ -16,6 +16,7 @@
     null-ls = { url = "github:jose-elias-alvarez/null-ls.nvim"; flake = false; };
     haskell-vim = { url = "github:neovimhaskell/haskell-vim"; flake = false; };
     rust-tools = { url = "github:simrat39/rust-tools.nvim"; flake = false; };
+    edgedb-vim = { url = "github:edgedb/edgedb-vim"; flake = false; };
 
     # Syntax highlighting
     vim-nix = { url = "github:LnL7/vim-nix"; flake = false; };
@@ -81,6 +82,7 @@
           "nvim-typescript"
           "null-ls"
           "haskell-vim"
+          "edgedb-vim"
           "rust-tools"
           "vim-nix"
           "vim-glsl"
