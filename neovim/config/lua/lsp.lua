@@ -168,11 +168,29 @@ nvim_lsp.rust_analyzer.setup({
   }
 })
 
-nvim_lsp.hls.setup({
-  on_attach = on_attach,
-  capabilities = capabilities,
-  cmd = { "haskell-language-server-wrapper", "--lsp" }
-})
+local ht = require('haskell-tools')
+local def_opts = { noremap = true, silent = true }
+ht.setup {
+  hls = {
+    on_attach = function(client, bufnr)
+      local opts = vim.tbl_extend('keep', def_opts, { buffer = bufnr, })
+      vim.keymap.set('n', '<leader>ca', vim.lsp.codelens.run, opts)
+      vim.keymap.set('n', '<leader>hs', ht.hoogle.hoogle_signature, opts)
+    end,
+  },
+}
+
+vim.keymap.set('n', '<leader>rr', ht.repl.toggle, def_opts)
+vim.keymap.set('n', '<leader>rf', function()
+  ht.repl.toggle(vim.api.nvim_buf_get_name(0))
+end, def_opts)
+vim.keymap.set('n', '<leader>rq', ht.repl.quit, def_opts)
+
+--nvim_lsp.hls.setup({
+  --on_attach = on_attach,
+  --capabilities = capabilities,
+  --cmd = { "haskell-language-server-wrapper", "--lsp" }
+--})
 
 nvim_lsp.rnix.setup({
   on_attach = on_attach,

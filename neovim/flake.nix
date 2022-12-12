@@ -17,6 +17,7 @@
     haskell-vim = { url = "github:neovimhaskell/haskell-vim"; flake = false; };
     rust-tools = { url = "github:simrat39/rust-tools.nvim"; flake = false; };
     edgedb-vim = { url = "github:edgedb/edgedb-vim"; flake = false; };
+    haskell-tools = { url = "github:MrcJkb/haskell-tools.nvim"; flake = false; };
 
     # Syntax highlighting
     vim-nix = { url = "github:LnL7/vim-nix"; flake = false; };
@@ -83,6 +84,7 @@
           "null-ls"
           "haskell-vim"
           "edgedb-vim"
+          "haskell-tools"
           "rust-tools"
           "vim-nix"
           "vim-glsl"

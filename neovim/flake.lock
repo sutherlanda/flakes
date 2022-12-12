@@ -190,6 +190,22 @@
         "type": "github"
       }
     },
+    "haskell-tools": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1670870880,
+        "narHash": "sha256-b51b8KuE5QtXigcko4kpywQ1oBS+UC3HFK+ST8MhY74=",
+        "owner": "MrcJkb",
+        "repo": "haskell-tools.nvim",
+        "rev": "eefbcd2b1bd0b0e5ef8fcc2c087017db1e126d66",
+        "type": "github"
+      },
+      "original": {
+        "owner": "MrcJkb",
+        "repo": "haskell-tools.nvim",
+        "type": "github"
+      }
+    },
     "haskell-vim": {
       "flake": false,
       "locked": {
@@ -483,6 +499,7 @@
         "fugitive": "fugitive",
         "gitsigns": "gitsigns",
         "gruvbox-nvim": "gruvbox-nvim",
+        "haskell-tools": "haskell-tools",
         "haskell-vim": "haskell-vim",
         "lualine-nvim": "lualine-nvim",
         "luasnip": "luasnip",
