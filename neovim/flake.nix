@@ -14,10 +14,8 @@
     nvim-lspconfig = { url = "github:neovim/nvim-lspconfig"; flake = false; };
     nvim-typescript = { url = "github:jose-elias-alvarez/typescript.nvim"; flake = false; };
     null-ls = { url = "github:jose-elias-alvarez/null-ls.nvim"; flake = false; };
-    haskell-vim = { url = "github:neovimhaskell/haskell-vim"; flake = false; };
     rust-tools = { url = "github:simrat39/rust-tools.nvim"; flake = false; };
     edgedb-vim = { url = "github:edgedb/edgedb-vim"; flake = false; };
-    haskell-tools = { url = "github:MrcJkb/haskell-tools.nvim"; flake = false; };
 
     # Syntax highlighting
     vim-nix = { url = "github:LnL7/vim-nix"; flake = false; };
@@ -82,9 +80,7 @@
           "nvim-lspconfig"
           "nvim-typescript"
           "null-ls"
-          "haskell-vim"
           "edgedb-vim"
-          "haskell-tools"
           "rust-tools"
           "vim-nix"
           "vim-glsl"
