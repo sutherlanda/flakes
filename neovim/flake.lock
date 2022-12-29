@@ -190,22 +190,6 @@
         "type": "github"
       }
     },
-    "haskell-vim": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1611065650,
-        "narHash": "sha256-4FvqwxaMu3Mznrmt4U5NZlmUAdUIiLpr9fW+kjdwcOA=",
-        "owner": "neovimhaskell",
-        "repo": "haskell-vim",
-        "rev": "f35d02204b4813d1dbe8b0e98cc39701a4b8e15e",
-        "type": "github"
-      },
-      "original": {
-        "owner": "neovimhaskell",
-        "repo": "haskell-vim",
-        "type": "github"
-      }
-    },
     "lualine-nvim": {
       "flake": false,
       "locked": {
@@ -483,7 +467,6 @@
         "fugitive": "fugitive",
         "gitsigns": "gitsigns",
         "gruvbox-nvim": "gruvbox-nvim",
-        "haskell-vim": "haskell-vim",
         "lualine-nvim": "lualine-nvim",
         "luasnip": "luasnip",
         "neovim-nightly-overlay": "neovim-nightly-overlay",
